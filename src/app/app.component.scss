@@ -1,11 +1,36 @@
 
 .nav-container {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
-.mat-sidenav {
-  width: 25vw;
+
+.nav-is-mobile .nav-toolbar {
+  position: fixed;
+  z-index: 2;
 }
+
+h1.nav-app-name {
+  margin-left: 8px;
+}
+
+.nav-sidenav-container {
+  flex: 1;
+}
+
+.nav-is-mobile .mat-drawer {
+  width : 50vw;
+}
+
+.mat-drawer {
+  width: 30vw;
+}
+
+.nav-is-mobile .nav-sidenav-container {
+  flex: 1 0 auto;
+}
+
