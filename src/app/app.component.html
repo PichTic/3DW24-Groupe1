@@ -1,7 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
+  <mat-sidenav-container class="nav-container">
+    <mat-sidenav #sidenav mode="side">
+      <mat-list role="list">
+          <mat-list-item role="listitem">Ajouter un jeu</mat-list-item>
+          <mat-list-item role="listitem">Ma Bibliothèque</mat-list-item>
+          <mat-list-item role="listitem">Mon Magasin</mat-list-item>
+          <mat-list-item role="listitem">Mon Compte</mat-list-item>
+        </mat-list>
+  </mat-sidenav>
 
-<mat-toolbar>
-  <mat-icon>menu</mat-icon>
-  &nbsp;{{title}}
-</mat-toolbar>
+  <mat-sidenav-content>
+      <mat-toolbar class="mat-elevation-z6">
+          <button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+        &nbsp;{{title}}
+      </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 <router-outlet></router-outlet>
