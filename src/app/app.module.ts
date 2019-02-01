@@ -9,11 +9,20 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import { LayoutModule } from '@angular/cdk/layout';
+import { AddGameComponent } from './add-game/add-game.component';
+import { BibliothequeComponent } from './bibliotheque/bibliotheque.component';
+import { StoreComponent } from './store/store.component';
+import { MyAccountComponent } from './my-account/my-account.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddGameComponent,
+    BibliothequeComponent,
+    StoreComponent,
+    MyAccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +33,8 @@ import {MatListModule} from '@angular/material/list';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

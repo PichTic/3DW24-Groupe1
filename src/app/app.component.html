@@ -10,33 +10,17 @@
       <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                    [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
         <mat-nav-list>
-            <mat-list-item role="listitem">Ajouter un jeu</mat-list-item>
-            <mat-list-item role="listitem">Ma Bibliothèque</mat-list-item>
-            <mat-list-item role="listitem">Mon Magasin</mat-list-item>
-            <mat-list-item role="listitem">Mon Compte</mat-list-item>
+            <mat-list-item role="listitem" routerLink="/addgame">Ajouter un jeu</mat-list-item>
+            <mat-list-item role="listitem" routerLink="/bibliotheque">Ma Bibliothèque</mat-list-item>
+            <mat-list-item role="listitem" routerLink="/store">Mon Magasin</mat-list-item>
+            <mat-list-item role="listitem" routerLink="/myaccount">Mon Compte</mat-list-item>
         </mat-nav-list>
       </mat-sidenav>
 
       <mat-sidenav-content>
-        <p>content</p>
+          <router-outlet></router-outlet>
       </mat-sidenav-content>
     </mat-sidenav-container>
   </div>
-<!-- <mat-sidenav-container class="nav-container">
-  <mat-sidenav #sidenav mode="side">
-    <mat-list role="list">
-        <mat-list-item role="listitem">Ajouter un jeu</mat-list-item>
-        <mat-list-item role="listitem">Ma Bibliothèque</mat-list-item>
-        <mat-list-item role="listitem">Mon Magasin</mat-list-item>
-        <mat-list-item role="listitem">Mon Compte</mat-list-item>
-    </mat-list>
-  </mat-sidenav>
 
-  <mat-sidenav-content>
-    <mat-toolbar class="mat-elevation-z6">
-      <button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
-      &nbsp;{{title}}
-    </mat-toolbar>
-  </mat-sidenav-content>
-</mat-sidenav-container> -->
-<router-outlet></router-outlet>
+
