@@ -40,3 +40,9 @@ body {
 .mat-list-base .mat-list-item .mat-list-item-content {
   justify-content: center!important;
 }
+
+.mat-form-field-wrapper {
+  position: absolute;
+  top: 9px;
+  right: 0;
+}

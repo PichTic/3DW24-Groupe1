@@ -1,8 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="nav-container" [class.nav-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="nav-toolbar mat-elevation-z2">
-    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-    <h1 class="nav-app-name">{{title}}</h1>
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <a class="homeLink" routerLink="/"><h1 class="nav-app-name" >{{title}}</h1></a>
+        <span class="example-spacer"></span>
+          <mat-form-field class="searchInput" appearance="outline" [style.visibility]="mobileQuery.matches ? 'hidden' : 'visible'">
+            <mat-label>Rechercher</mat-label>
+            <mat-icon matSuffix>search</mat-icon>
+            <input matInput placeholder="Tapez un mot clé">
+          </mat-form-field>
+      </mat-toolbar-row>
   </mat-toolbar>
 
   <mat-sidenav-container class="nav-sidenav-container"

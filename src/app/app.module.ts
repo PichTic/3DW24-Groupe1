@@ -17,6 +17,7 @@ import { MyAccountComponent } from './my-account/my-account.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HomeComponent } from './home/home.component';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
 
 @NgModule({
@@ -40,7 +41,9 @@ import { HomeComponent } from './home/home.component';
     MatListModule,
     LayoutModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

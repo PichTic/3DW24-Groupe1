@@ -1,4 +1,3 @@
-
 .nav-container {
   display: flex;
   flex-direction: column;
@@ -45,5 +44,29 @@ h1.nav-app-name {
 .icon-container {
   text-align: center;
   margin-top: 1rem;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-form-field {
+  font-size: 70%;
+}
+
+.mat-form-field-suffix .mat-icon {
+  font-size: 100%;
+  line-height: 5.125;
+}
+
+.mat-form-field-wrapper {
+  position: absolute;
+  top: -26px;
+  right: 0;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: inherit;
 }
 
