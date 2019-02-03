@@ -16,6 +16,7 @@ import { StoreComponent } from './store/store.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     BibliothequeComponent,
     StoreComponent,
     MyAccountComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
