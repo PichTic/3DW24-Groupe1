@@ -15,6 +15,7 @@ import { BibliothequeComponent } from './bibliotheque/bibliotheque.component';
 import { StoreComponent } from './store/store.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatListModule,
     LayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

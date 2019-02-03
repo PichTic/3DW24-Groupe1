@@ -9,12 +9,15 @@
                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav #snav [mode]="'over'"
                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-      <mat-nav-list>
-          <mat-list-item role="listitem" routerLink="/addgame">Ajouter un jeu</mat-list-item>
-          <mat-list-item role="listitem" routerLink="/bibliotheque">Ma Bibliothèque</mat-list-item>
-          <mat-list-item role="listitem" routerLink="/store">Mon Magasin</mat-list-item>
-          <mat-list-item role="listitem" routerLink="/myaccount">Mon Compte</mat-list-item>
-          <mat-list-item role="listitem" routerLink="/search" [style.visibility]="mobileQuery.matches ? 'visible' : 'hidden'">Rechercher</mat-list-item>
+      <div class="icon-container">
+        <img class="avatar-icon" src="./assets/imgs/avatar.jpg">
+      </div>
+      <mat-nav-list role="list">
+        <mat-list-item role="listitem" routerLink="/myaccount">Mon Compte</mat-list-item>
+        <mat-list-item role="listitem" routerLink="/addgame">Ajouter un jeu</mat-list-item>
+        <mat-list-item role="listitem" routerLink="/bibliotheque">Ma Bibliothèque</mat-list-item>
+        <mat-list-item role="listitem" routerLink="/store">Mon Magasin</mat-list-item>
+        <mat-list-item role="listitem" routerLink="/search" [style.visibility]="mobileQuery.matches ? 'visible' : 'hidden'">Rechercher</mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
 
