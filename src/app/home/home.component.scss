@@ -1,0 +1,16 @@
+.img-home {
+  background-image: url("../../assets/imgs/home.jpg");
+  width: 100%;
+  //width: 100em;
+  height: 25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+@media (min-width: 40em) {
+/* Probably some parent element that limits the img width */
+  main {
+    width: 80%;
+  }
+}
