@@ -1,10 +1,8 @@
 <div class="img-home">
 </div>
-<mat-card>
-  <mat-card-title>Ma Bibliothèque</mat-card-title>
-  <img mat-card-image src="../../assets/imgs/home.png" href="">
-</mat-card>
-<mat-card>
-  <mat-card-title>Mon Magasin</mat-card-title>
-  <img mat-card-image src="../../assets/imgs/home.png" href="">
-</mat-card>
+<div class="content" fxLayoutGap="20px" fxLayout="row" fxLayout.xs="column">
+    <app-tile *ngFor="let tile of tiles" [tile]="tile"></app-tile>
+</div>
+
+
+

@@ -18,6 +18,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HomeComponent } from './home/home.component';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { TileComponent } from './tile/tile.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
     StoreComponent,
     MyAccountComponent,
     HomeComponent,
+    TileComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
     MatCardModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
