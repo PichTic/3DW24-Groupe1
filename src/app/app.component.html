@@ -14,6 +14,7 @@
           <mat-list-item role="listitem" routerLink="/bibliotheque">Ma Bibliothèque</mat-list-item>
           <mat-list-item role="listitem" routerLink="/store">Mon Magasin</mat-list-item>
           <mat-list-item role="listitem" routerLink="/myaccount">Mon Compte</mat-list-item>
+          <mat-list-item role="listitem" routerLink="/search" [style.visibility]="mobileQuery.matches ? 'visible' : 'hidden'">Rechercher</mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
 
