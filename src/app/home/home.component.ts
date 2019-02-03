@@ -7,8 +7,8 @@ import { Tile } from '../tiles';
 })
 export class HomeComponent implements OnInit {
   tiles: Tile[] = [
-    {img: '/assets/imgs/bibliotheque.jpg', title: 'Bibliothèque'},
-    {img: '/assets/imgs/magasin.jpg', title: 'Magasin'},
+    {img: '/assets/imgs/bibliotheque.jpg', title: 'Bibliothèque', link:'/bibliotheque'},
+    {img: '/assets/imgs/magasin.jpg', title: 'Magasin', link:'/store'},
   ];
   constructor() { }
 
