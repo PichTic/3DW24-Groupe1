@@ -14,6 +14,7 @@ import { AddGameComponent } from './add-game/add-game.component';
 import { BibliothequeComponent } from './bibliotheque/bibliotheque.component';
 import { StoreComponent } from './store/store.component';
 import { MyAccountComponent } from './my-account/my-account.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { MyAccountComponent } from './my-account/my-account.component';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    LayoutModule
+    LayoutModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
