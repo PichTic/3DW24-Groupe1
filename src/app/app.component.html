@@ -5,14 +5,20 @@
         <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
         <a class="homeLink" routerLink="/"><h1 class="nav-app-name" >{{title}}</h1></a>
         <span class="example-spacer"></span>
-          <mat-form-field class="searchInput" appearance="outline" [style.visibility]="mobileQuery.matches ? 'hidden' : 'visible'">
+
+          <mat-form-field  class="searchInput" appearance="outline" [style.visibility]="mobileQuery.matches ? 'hidden' : 'visible'">
             <mat-label>Rechercher</mat-label>
             <mat-icon matSuffix>search</mat-icon>
-            <input matInput placeholder="Tapez un mot clé">
+            <input matInput  [(ngModel)]="keyword" (keyup.enter)="searchGames();" placeholder="Tapez un mot clé">
           </mat-form-field>
       </mat-toolbar-row>
   </mat-toolbar>
 
+  <div *ngIf="showResults"  >
+    <p *ngFor="let game of games">
+      {{game.name}}
+    </p>
+  </div>
   <mat-sidenav-container class="nav-sidenav-container"
                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav #snav [mode]="'over'"

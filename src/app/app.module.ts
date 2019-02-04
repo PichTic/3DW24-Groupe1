@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +22,8 @@ import { HomeComponent } from './home/home.component';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { TileComponent } from './tile/tile.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 
 @NgModule({
@@ -31,10 +35,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MyAccountComponent,
     HomeComponent,
     TileComponent,
+    SearchResultsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
@@ -47,7 +53,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    MatBottomSheetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
