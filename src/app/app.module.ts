@@ -35,7 +35,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     MyAccountComponent,
     HomeComponent,
     TileComponent,
-    SearchResultsComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +56,9 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     FlexLayoutModule,
     FormsModule,
     MatBottomSheetModule
+  ],
+  entryComponents: [
+    SearchResultsComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
