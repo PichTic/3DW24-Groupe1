@@ -1,4 +1,8 @@
-<mat-action-list>
+<mat-action-list *ngIf="data.length">
   <button mat-list-item *ngFor="let game of data">{{game.name}}</button>
 </mat-action-list>
+
+<div *ngIf="!data.length">
+  <p>no games found</p>
+</div>
 
