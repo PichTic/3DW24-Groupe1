@@ -25,6 +25,14 @@ export class RestApiService {
       catchError(this.handleError)
     )
   }
+    // get details games ID
+  getInfoGames(ID): Observable<Game> {
+    return this.http.get<Game>(this.apiURL + '/game/' + ID)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
   // errors msgs
   handleError(error) {
     let errorMessage = '';

@@ -6,6 +6,7 @@ import { BibliothequeComponent } from './bibliotheque/bibliotheque.component';
 import { StoreComponent } from './store/store.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { HomeComponent } from './home/home.component';
+import { GameDetailComponent }  from './game-detail/game-detail.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,8 @@ const routes: Routes = [
   { path: 'bibliotheque', component: BibliothequeComponent },
   { path: 'store', component: StoreComponent },
   { path: 'myaccount', component: MyAccountComponent },
+  { path: 'game/:GameId', component: GameDetailComponent },
+
 ];
 
 @NgModule({

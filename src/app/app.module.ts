@@ -24,6 +24,7 @@ import { TileComponent } from './tile/tile.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { GameDetailComponent } from './game-detail/game-detail.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     MyAccountComponent,
     HomeComponent,
     TileComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    GameDetailComponent
   ],
   imports: [
     BrowserModule,

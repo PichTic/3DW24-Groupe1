@@ -3,6 +3,7 @@ import { RestApiService } from "../app/rest-api.service";
 import { ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
 import {SearchResultsComponent} from "./search-results/search-results.component";
+import {GameDetailComponent}  from './game-detail/game-detail.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class AppComponent implements OnDestroy {
   title = 'Game Tracker';
   mobileQuery: MediaQueryList;
   keyword: string;
+  ID:string;
   showResults = false;
   // games: any = [];
 
@@ -35,6 +37,16 @@ export class AppComponent implements OnDestroy {
     })
 
   }
+
+    detailGames(): void {
+    this.restApi.getInfoGames(this.ID).subscribe((data: {}) => {
+      this.bottomSheet.open(GameDetailComponent, {
+        data: data,
+      });
+    })
+
+  }
+
   // searchGames() {
   //   this.showResults = true;
   //   this.openBottomSheet();
