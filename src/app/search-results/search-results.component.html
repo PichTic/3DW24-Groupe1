@@ -1,5 +1,5 @@
 <mat-action-list *ngIf="data.length">
-  <button  routerLink="/game/{{game.id}}" mat-list-item *ngFor="let game of data">{{game.name}}</button>
+  <button routerLink="/game/{{game.id}}" (click)="dismiss()" mat-list-item *ngFor="let game of data">{{game.name}}</button>
 </mat-action-list>
 
 <div *ngIf="!data.length">

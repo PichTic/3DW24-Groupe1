@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestApiService } from "../../app/rest-api.service";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +14,12 @@ export class GameDetailComponent implements OnInit {
 
   constructor(
     public restApi: RestApiService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router
+    )
+    {
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    }
 
   detailGames(id:any): void {
     this.restApi.getInfoGames(id).subscribe((data: {}) => {
@@ -23,17 +28,16 @@ export class GameDetailComponent implements OnInit {
   }
   getImgUrl(id:any) {
     this.restApi.getImgUrl(id).subscribe((data: {}) => {
-      console.log(data);
       if (data[0].hasOwnProperty('image_id')) {
         this.imgUrl += data[0].image_id + '.jpg';
       } else { //@todo default image if not available
         this.imgUrl = './assets/imgs/game.png'
       }
-      console.log('img' + this.imgUrl);
    })
   }
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
+    console.log(id)
     this.detailGames(id)
     this.getImgUrl(id)
   }

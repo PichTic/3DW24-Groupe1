@@ -29,7 +29,9 @@ export class AppComponent implements OnDestroy {
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
+
   searchGames(): void {
+    console.log('triggered search games');
     this.restApi.getGames(this.keyword).subscribe((data: {}) => {
       this.bottomSheet.open(SearchResultsComponent, {
         data: data,
@@ -37,23 +39,6 @@ export class AppComponent implements OnDestroy {
     })
 
   }
-
-    detailGames(): void {
-    this.restApi.getInfoGames(this.ID).subscribe((data: {}) => {
-      this.bottomSheet.open(GameDetailComponent, {
-        data: data,
-      });
-    })
-
-  }
-
-  // searchGames() {
-  //   this.showResults = true;
-  //   this.openBottomSheet();
-  //   return this.restApi.getGames(this.keyword).subscribe((data: {}) => {
-  //     this.games = data;
-  //   })
-  // }
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }

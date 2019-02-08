@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MAT_BOTTOM_SHEET_DATA} from '@angular/material';
+import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
 
 
 
@@ -10,8 +11,10 @@ import {MAT_BOTTOM_SHEET_DATA} from '@angular/material';
 })
 export class SearchResultsComponent implements OnInit {
 
-  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any) {}
-
+  constructor(private bottomSheet: MatBottomSheet, @Inject(MAT_BOTTOM_SHEET_DATA) public data: any) {}
+  dismiss() {
+    this.bottomSheet.dismiss();
+  }
   ngOnInit() {
   }
 
