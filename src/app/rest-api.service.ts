@@ -33,6 +33,15 @@ export class RestApiService {
       catchError(this.handleError)
     )
   }
+  // get game img Url
+  getImgUrl(id): Observable<Game> {
+    return this.http.get<Game>(this.apiURL + '/img/' + id)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
   // errors msgs
   handleError(error) {
     let errorMessage = '';

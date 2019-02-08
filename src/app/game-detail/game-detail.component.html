@@ -1,8 +1,16 @@
-<div *ngIf="gameDetails">
-  <h2>{{gameDetails.name}}</h2>
-  <div><span>id: </span>{{gameDetails.id}}</div>
-  <div>
-    <label>name: {{gameDetails.name}}
-    </label>
-  </div>
+<div class="content" fxLayoutGap="20px" fxLayoutAlign="center center">
+  <mat-card class *ngIf="gameDetails">
+    <mat-card-header>
+      <mat-card-title>{{gameDetails.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="imgUrl" alt="Game photo">
+    <mat-card-content>
+      <p>
+        {{gameDetails.summary}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Evaluer</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
