@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'bibliotheque', component: BibliothequeComponent },
   { path: 'store', component: StoreComponent },
   { path: 'myaccount', component: MyAccountComponent },
-  { path: 'game/:GameId', component: GameDetailComponent },
+  { path: 'game/:id', component: GameDetailComponent },
 
 ];
 

@@ -1,8 +1,10 @@
 <mat-action-list *ngIf="data.length">
-  <button (click)="detailGames(game.id)" mat-list-item *ngFor="let game of data">{{game.name}}</button>
+  <button  routerLink="/game/{{game.id}}" mat-list-item *ngFor="let game of data">{{game.name}}</button>
 </mat-action-list>
 
 <div *ngIf="!data.length">
   <p>no games found</p>
 </div>
+
+
 
