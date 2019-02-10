@@ -1,5 +1,17 @@
-
 <mat-card>
-  <h3>{{gameDetails.name}} _ {{gameDetails.id}} _ {{review.gameId}}</h3>
-  <p>Note : {{review.score}}</p>
+  <img mat-card-image [src]="imgUrl" alt="Game photo">
+  <mat-card-content>
+    <mat-card-title>{{gameDetails.name}}</mat-card-title>
+    <p class="noteContainer">
+      <span class="note">{{review.score}}/10</span>
+    </p>
+    <div *ngIf="isPlayed" class="slider" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center">
+        <mat-slider thumbLabel min="1" max="10" step="1" [(ngModel)]="myValue" (change)="onChange()"></mat-slider>
+        <p class="myValue">{{myValue}}/10</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button *ngIf="!isPlayed" (click)="Played()">Re-évaluer</button>
+    <button mat-button *ngIf="isPlayed" (click)="postReview(myValue ,gameDetails.id)">Mettre à jour</button>
+  </mat-card-actions>
 </mat-card>

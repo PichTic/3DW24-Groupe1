@@ -12,6 +12,7 @@ export class GameDetailComponent implements OnInit {
   gameDetails:object = {};
   imgUrl = 'https://images.igdb.com/igdb/image/upload/t_720p/';
   myValue = 0;
+  isPlayed = false;
 
 
   constructor(
@@ -39,12 +40,14 @@ export class GameDetailComponent implements OnInit {
   }
 
   postReview(value, gameId) {
-    this.restApi.postReview(value, gameId)
-    console.log(this.restApi.postReview(value, gameId).subscribe());
+    this.restApi.postReview(value, gameId).subscribe();
   }
 
   onChange() {
     console.log(this.myValue);
+  }
+  Played() {
+    this.isPlayed = true;
   }
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');

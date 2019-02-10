@@ -1,0 +1,18 @@
+.mat-card-image {
+  object-fit: contain;
+  max-height: 30vh;
+  max-width: 40vw;
+  object-position: top;
+}
+.mat-card {
+  margin: .5rem;
+  width: 30vw;
+}
+
+.note {
+  font-size: 200%;
+}
+
+.noteContainer {
+  text-align: center;
+}
