@@ -15,6 +15,7 @@ export class GameDetailComponent implements OnInit {
   isPlayed = false;
 
 
+
   constructor(
     public restApi: RestApiService,
     private route: ActivatedRoute,
@@ -41,8 +42,11 @@ export class GameDetailComponent implements OnInit {
 
   postReview(value, gameId) {
     this.restApi.postReview(value, gameId).subscribe();
+    this.gotoBibli();
   }
-
+  gotoBibli():void {
+    this.router.navigate(['/bibliotheque']);
+  }
   onChange() {
     console.log(this.myValue);
   }
