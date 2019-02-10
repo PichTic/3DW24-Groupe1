@@ -41,8 +41,7 @@ export class GameDetailComponent implements OnInit {
   }
 
   postReview(value, gameId) {
-    this.restApi.postReview(value, gameId).subscribe();
-    this.gotoBibli();
+    this.restApi.postReview(value, gameId).subscribe(() => this.gotoBibli());
   }
   gotoBibli():void {
     this.router.navigate(['/bibliotheque']);
