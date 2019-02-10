@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Game } from './game';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
@@ -20,8 +19,8 @@ export class RestApiService {
   };
 
   // get games
-  getGames(keyword): Observable<Game> {
-    return this.http.get<Game>(this.apiURL + '/search/' + keyword)
+  getGames(keyword): Observable<any> {
+    return this.http.get<any>(this.apiURL + '/search/' + keyword)
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -29,8 +28,8 @@ export class RestApiService {
   }
 
   // get details games ID
-  getInfoGames(ID): Observable<Game> {
-    return this.http.get<Game>(this.apiURL + '/game/' + ID)
+  getInfoGames(ID): Observable<any> {
+    return this.http.get<any>(this.apiURL + '/game/' + ID)
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -38,8 +37,8 @@ export class RestApiService {
   }
 
   // get game img Url
-  getImgUrl(id): Observable<Game> {
-    return this.http.get<Game>(this.apiURL + '/img/' + id)
+  getImgUrl(id): Observable<any> {
+    return this.http.get<any>(this.apiURL + '/img/' + id)
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -50,6 +49,15 @@ export class RestApiService {
   postReview(value, gameId): Observable<any> {
     console.log(value, gameId);
     return this.http.post<any>(this.apiURL + '/users/1/games/' + gameId + '/review', {score: value} )
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
+  // get user reviews
+  getUserReviews(): Observable<any> {
+    return this.http.get<any>(this.apiURL + '/users/1/reviews')
     .pipe(
       retry(1),
       catchError(this.handleError)

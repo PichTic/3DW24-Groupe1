@@ -3,7 +3,6 @@ import { RestApiService } from "../app/rest-api.service";
 import { ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
 import {SearchResultsComponent} from "./search-results/search-results.component";
-import {GameDetailComponent}  from './game-detail/game-detail.component';
 
 @Component({
   selector: 'app-root',

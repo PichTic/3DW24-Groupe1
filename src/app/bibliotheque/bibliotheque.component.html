@@ -1,1 +1,3 @@
-<mat-card>Biblohteque</mat-card>
+<div *ngIf="userReviews">
+  <app-game-tile *ngFor="let review of userReviews" [review]="review"></app-game-tile>
+</div>

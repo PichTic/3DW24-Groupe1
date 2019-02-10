@@ -14,11 +14,6 @@
       </mat-toolbar-row>
   </mat-toolbar>
 
-  <div *ngIf="showResults"  >
-    <p *ngFor="let game of games">
-      {{game.name}}
-    </p>
-  </div>
   <mat-sidenav-container class="nav-sidenav-container"
                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav #snav [mode]="'over'"

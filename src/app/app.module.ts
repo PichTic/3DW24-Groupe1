@@ -27,6 +27,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSliderModule} from '@angular/material/slider';
+import { GameTileComponent } from './game-tile/game-tile.component';
 
 
 
@@ -40,7 +41,8 @@ import {MatSliderModule} from '@angular/material/slider';
     HomeComponent,
     TileComponent,
     SearchResultsComponent,
-    GameDetailComponent
+    GameDetailComponent,
+    GameTileComponent
   ],
   imports: [
     BrowserModule,
