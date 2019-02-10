@@ -1,12 +1,15 @@
 .mat-card-image {
-  object-fit: contain;
+  object-fit: cover;
   max-height: 30vh;
   max-width: 40vw;
-  object-position: top;
+  object-position: center top;
 }
 .mat-card {
   margin: .5rem;
   width: 30vw;
+  @media screen and (max-width: 815px) {
+    width: 90vw;
+  }
 }
 
 .note {
@@ -15,4 +18,19 @@
 
 .noteContainer {
   text-align: center;
+}
+
+.slider {
+  width: 100%;
+}
+
+.mat-slider {
+  width: 100%;
+}
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

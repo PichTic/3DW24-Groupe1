@@ -1,3 +1,8 @@
-<div *ngIf="userReviews"fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center">
-  <app-game-tile *ngFor="let review of userReviews" [review]="review"></app-game-tile>
+<div *ngIf="userReviews" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center">
+  <app-game-tile #reviews *ngFor="let review of userReviews" [review]="review"></app-game-tile>
 </div>
+<div *ngIf="!userReviews">
+  <p>Aucuns jeux ajoutés</p>
+</div>
+
+
