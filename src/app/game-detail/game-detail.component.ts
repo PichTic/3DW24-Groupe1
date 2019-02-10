@@ -10,7 +10,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class GameDetailComponent implements OnInit {
   gameDetails:object = {};
-  imgUrl= 'https://images.igdb.com/igdb/image/upload/t_720p/';
+  imgUrl = 'https://images.igdb.com/igdb/image/upload/t_720p/';
+  myValue = 0;
+
 
   constructor(
     public restApi: RestApiService,
@@ -34,6 +36,15 @@ export class GameDetailComponent implements OnInit {
         this.imgUrl = './assets/imgs/game.png'
       }
    })
+  }
+
+  postReview(value, gameId) {
+    this.restApi.postReview(value, gameId)
+    console.log(this.restApi.postReview(value, gameId).subscribe());
+  }
+
+  onChange() {
+    console.log(this.myValue);
   }
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');

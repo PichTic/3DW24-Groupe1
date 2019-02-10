@@ -7,15 +7,17 @@ import { retry, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+
 export class RestApiService {
-  apiURL = 'http://localhost:3000';
+
   constructor(private http: HttpClient) { }
 
+  apiURL = 'http://localhost:3000';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
-  }
+  };
 
   // get games
   getGames(keyword): Observable<Game> {
@@ -25,7 +27,8 @@ export class RestApiService {
       catchError(this.handleError)
     )
   }
-    // get details games ID
+
+  // get details games ID
   getInfoGames(ID): Observable<Game> {
     return this.http.get<Game>(this.apiURL + '/game/' + ID)
     .pipe(
@@ -33,6 +36,7 @@ export class RestApiService {
       catchError(this.handleError)
     )
   }
+
   // get game img Url
   getImgUrl(id): Observable<Game> {
     return this.http.get<Game>(this.apiURL + '/img/' + id)
@@ -42,6 +46,15 @@ export class RestApiService {
     )
   }
 
+  // post review
+  postReview(value, gameId): Observable<any> {
+    console.log(value, gameId);
+    return this.http.post<any>(this.apiURL + '/users/1/games/' + gameId + '/review', {score: value} )
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
   // errors msgs
   handleError(error) {
     let errorMessage = '';

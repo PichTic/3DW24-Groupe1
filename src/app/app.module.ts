@@ -26,6 +26,7 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSliderModule} from '@angular/material/slider';
 
 
 
@@ -60,7 +61,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     FlexLayoutModule,
     FormsModule,
     MatBottomSheetModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSliderModule
   ],
   entryComponents: [
     SearchResultsComponent,

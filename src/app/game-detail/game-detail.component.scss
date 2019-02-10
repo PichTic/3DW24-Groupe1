@@ -1,8 +1,25 @@
 .mat-card {
   width: 40vw;
+  margin-top: 2em;
+  @media screen and (max-width: 815px) {
+    width: 90vw;
+  }
 }
 .mat-card-image {
   max-width: 20vw;
   display:block;
   margin:auto;
+}
+
+.slider {
+  width: 100%;
+}
+
+.mat-slider {
+  width: 100%;
+}
+
+.myValue {
+  font-size: 200%;
+  margin: 0 2rem;
 }

@@ -8,9 +8,13 @@
       <p>
         {{gameDetails.summary}}
       </p>
+      <div class="slider" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center">
+        <mat-slider thumbLabel min="1" max="100" step="0.5" [(ngModel)]="myValue" (change)="onChange()"></mat-slider>
+        <p class="myValue">{{myValue}}%</p>
+      </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>Evaluer</button>
+      <button mat-button (click)="postReview(myValue ,gameDetails.id)">Evaluer et ajouter à se bibliothèque</button>
     </mat-card-actions>
   </mat-card>
 </div>
